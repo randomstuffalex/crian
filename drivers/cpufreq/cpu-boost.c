@@ -181,10 +181,9 @@ static void do_input_boost_rem(struct work_struct *work)
 	}
 
 #ifdef CONFIG_DYNAMIC_STUNE_BOOST
-       /* Reset dynamic stune boost value to the default value */
-       reset_stune_boost("top-app");
+	/* Reset dynamic stune boost value to the default value */
+	reset_stune_boost("top-app");
 #endif /* CONFIG_DYNAMIC_STUNE_BOOST */
-
 
 	/* Update policies for all online CPUs */
 	update_policy_online();
@@ -223,8 +222,8 @@ static void do_input_boost(struct work_struct *work)
 	update_policy_online();
 
 #ifdef CONFIG_DYNAMIC_STUNE_BOOST
-       /* Set dynamic stune boost value */
-       do_stune_boost("top-app", dynamic_stune_boost);
+	/* Set dynamic stune boost value */
+	do_stune_boost("top-app", dynamic_stune_boost);
 #endif /* CONFIG_DYNAMIC_STUNE_BOOST */
 
 	queue_delayed_work(cpu_boost_wq, &input_boost_rem,
@@ -288,8 +287,8 @@ err2:
 static void cpuboost_input_disconnect(struct input_handle *handle)
 {
 #ifdef CONFIG_DYNAMIC_STUNE_BOOST
-       /* Reset dynamic stune boost value to the default value */
-       reset_stune_boost("top-app");
+	/* Reset dynamic stune boost value to the default value */
+	reset_stune_boost("top-app");
 #endif /* CONFIG_DYNAMIC_STUNE_BOOST */
 
 	input_close_device(handle);
