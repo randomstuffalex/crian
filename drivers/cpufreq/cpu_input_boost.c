@@ -16,9 +16,9 @@
 static unsigned short dynamic_stune_boost = 15;
 #endif
 
-unsigned int input_boost_freq_lp = CONFIG_INPUT_BOOST_FREQ_LP;
-unsigned int input_boost_freq_hp = CONFIG_INPUT_BOOST_FREQ_PERF;
-unsigned short input_boost_duration = CONFIG_INPUT_BOOST_DURATION_MS;
+static unsigned int input_boost_freq_lp = CONFIG_INPUT_BOOST_FREQ_LP;
+static unsigned int input_boost_freq_hp = CONFIG_INPUT_BOOST_FREQ_PERF;
+static unsigned short input_boost_duration = CONFIG_INPUT_BOOST_DURATION_MS;
 
 module_param(input_boost_freq_lp, uint, 0644);
 module_param(input_boost_freq_hp, uint, 0644);
